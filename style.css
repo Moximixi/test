@@ -1,0 +1,52 @@
+html{
+    font-size: 625%;
+}
+.wrap{
+    position: relative;
+    padding: 1rem 15% 0.25rem 15%;
+    min-height:100vh;
+}
+div{
+    display: block;
+}
+body{
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    color: white;
+    background-color: #6ccdd5;
+}
+h2{
+    margin: 0 0 0.8rem 0;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h2 img{
+    max-width: 20em;
+}
+p{
+    font-size: 2em;
+    line-height: 1.6;
+    display: block;
+}
+
+.footer{
+    padding: 1rem 0 0 0;
+    overflow: hidden;
+}
+
+.footer div{
+    min-width: 0.6rem;
+    text-align: center;
+    display: block;
+}
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
