@@ -1,6 +1,18 @@
 html{
     font-size: 625%;
 }
+
+.back-btn{
+    background-image: url("img/button.png");
+    position: absolute;
+    left: .1rem;
+    top: .1rem;
+    width: 0.27rem;
+    height: 0.27rem;
+    background-size: 0.27rem;
+}
+
+
 .wrap{
     position: relative;
     padding: 1rem 15% 0.25rem 15%;
@@ -25,10 +37,10 @@ h2{
 }
 
 h2 img{
-    max-width: 20em;
+    max-width: 5em;
 }
 p{
-    font-size: 2em;
+    font-size: 1em;
     line-height: 1.6;
     display: block;
 }
