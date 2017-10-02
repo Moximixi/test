@@ -40,6 +40,8 @@ h2 img{
     max-width: 5em;
 }
 p{
+    text-align: center;
+    align-items: center;
     font-size: 1em;
     line-height: 1.6;
     display: block;
