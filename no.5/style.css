@@ -33,16 +33,16 @@ button{
     width: 45%;
     height: 3rem;
     border-radius: 0.5rem;
-    border: 1px solid cornflowerblue;
+    border: 1px solid #5FC0CD;
 }
 .bot1{
     background-color: white;
     position: absolute;
     left: 3.3%;
-    color: cornflowerblue;
+    color: #5FC0CD;
 }
 .bot2{
-    background-color: cornflowerblue;
+    background-color: #5FC0CD;
     position: absolute;
     right: 3.3%;
     color: white;
