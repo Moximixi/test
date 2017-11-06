@@ -1,0 +1,161 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    font-family: "Microsoft YaHei UI";
+}
+/* header部分*/
+header{
+    position: fixed;
+    top: 0;
+    z-index:99;
+    width: 100%;
+    /*border: 1px solid black;*/
+}
+.hpart1{
+    height: 5rem;
+    background-color:#29bde0 ;
+    display: flex;
+    justify-content: space-between;
+}
+.hpart2{
+    position: relative;
+    margin-top: -1.5rem;
+    height: 4rem;
+    background-color: #b9e9f5;
+}
+.hpart3{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    background-color: #29bde0;
+}
+.hpart1 p{
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.hpart1 img{
+    position: relative;
+    top: 1.5rem;
+}
+
+.hpart2 img{
+    position: absolute;
+    top: 1rem;
+    right: 0;
+}
+.hpart2 p{
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+
+
+.triangle{
+    position: relative;
+    left: 2rem;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-width:1.5rem .5rem 0rem .5rem ;
+    border-color: #b9e9f5 #29bde0;
+    border-style: solid;
+}
+.hpart3 p{
+    position: relative;
+    margin: 0;
+    color: #ffffff;
+    top: 1rem;
+    left: 2rem;
+    font-size: 1.5rem;
+}
+
+img.sotiny{
+    width: 15px;
+    height: 15px;
+}
+img.tiny{
+    width: 25px;
+    height: 25px;
+}
+
+/* content部分*/
+.content{
+    position: relative;
+    top: 13.5rem;
+    margin-bottom: .5rem;/*解决了下边不连接的问题*/
+    background-color:#29bde0 ;
+    overflow: scroll;
+}
+.selector{
+    width: 100%;
+    opacity: 0;/*先让他消失*/
+}
+.cpart1:hover .selector{
+    opacity: 1;
+}
+.cpart2:hover .selector{
+    opacity: 1;
+}
+.cpart3:hover .selector{
+    opacity: 1;
+}
+/* 第一行*/
+.row{
+    margin: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.cpart1{
+    height: 6rem;
+    width: 6rem;
+    background-color:#f5c97b ;
+    border:2px solid #ffffff;
+}
+.cpart2{
+    height: 6rem;
+    width: 6rem;
+    background-color:#f5c97b ;
+    border:2px solid #ffffff;
+}
+.cpart3{
+    height: 6rem;
+    width: 6rem;
+    background-color:#f5c97b ;
+    border:2px solid #ffffff;
+}
+
+.p1{
+    text-align: center;
+    font-size: 1rem;
+    padding: .75rem;
+}
+.p2{
+    background-color: #83b09a;
+    text-align: center;
+    font-size: 1rem;
+}
+/*footer部分*/
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: #29bde0;
+}
+.footbotn{
+    position: fixed;
+    margin: 0 10%;
+    bottom: .5rem;
+    height: 3rem;
+    width: 80%;
+    font-size: 1.5rem;
+    border: 0;
+    color: #ffffff;
+    background-color: #fbb435;
+}
+
+
