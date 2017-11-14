@@ -85,10 +85,10 @@ img.tiny{
 /* content部分*/
 .content{
     position: relative;
-    top: 13.5rem;
-    margin-bottom: .5rem;/*解决了下边不连接的问题*/
+    padding-top: 20rem;
+    padding-bottom: 25rem;/*将content的下半部分延长*/
     background-color:#29bde0 ;
-    overflow: scroll;
+    overflow: hidden;
 }
 .selector{
     width: 100%;
@@ -142,8 +142,8 @@ img.tiny{
 footer{
     position: fixed;
     bottom: 0;
+    height: 10rem;
     width: 100%;
-    height: 2rem;
     background-color: #29bde0;
 }
 .footbotn{
@@ -152,10 +152,17 @@ footer{
     bottom: .5rem;
     height: 3rem;
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border: 0;
     color: #ffffff;
     background-color: #fbb435;
+    text-align: center;
+}
+a:hover,a:link{
+    text-decoration: none;
 }
 
-
+/*
+1.音频部分还是没做
+2.下面貌似不是按钮哟~需要改进
+*/

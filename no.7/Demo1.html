@@ -2,20 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
-    <title>Title</title>
+    <title>投票页</title>
     <link rel="stylesheet" href="css/style1.css" type="text/css">
+    <script>
+        function a() {
+            var audio=document.getElementById("music");
+            if(audio.paused){
+                audio.play();
+            }
+            else {
+                audio.pause();
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="hpart1">
-        <img src="img/leftup.png" class="tiny">
+        <img src="img/demo1/leftup.png" class="tiny">
         <p>投票</p>
-        <img src="img/rightup.png" class="tiny">
+            <img src="img/demo1/rightup.png" class="tiny">
         </div>
 
         <div class="hpart2">
             <p>发言讨论结束，请大家投票</p>
-            <img src="img/player.png" class="tiny">
+            <audio src="audio/over.mp3" controls="controls" id="music" hidden>
+            </audio>
+            <button class="voice" onclick="a()";>
+            <img src="img/demo1/player.png" class="tiny">
+            </button>
         </div>
 
         <div class="hpart3">
@@ -29,17 +44,17 @@
             <div class="cpart1">
                 <p class="p1">水民</p>
                 <p class="p2">1号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart2">
                 <p class="p1">水民</p>
                 <p class="p2">2号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart3">
                 <p class="p1">警察</p>
                 <p class="p2">3号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
         </div>
 
@@ -47,17 +62,17 @@
             <div class="cpart1">
                 <p class="p1">法官</p>
                 <p class="p2">4号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart2">
                 <p class="p1">狙击手</p>
                 <p class="p2">5号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart3">
                 <p class="p1">医生</p>
                 <p class="p2">6号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
         </div>
 
@@ -65,17 +80,17 @@
             <div class="cpart1">
                 <p class="p1">杀手</p>
                 <p class="p2">7号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart2">
                 <p class="p1">水民</p>
                 <p class="p2">8号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart3">
                 <p class="p1">水民</p>
                 <p class="p2">9号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
         </div>
 
@@ -83,17 +98,17 @@
             <div class="cpart1">
                 <p class="p1">杀手</p>
                 <p class="p2">10号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart2">
                 <p class="p1">丘比特</p>
                 <p class="p2">11号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart3">
                 <p class="p1">预言家</p>
                 <p class="p2">12号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
         </div>
 
@@ -101,17 +116,17 @@
             <div class="cpart1">
                 <p class="p1">杀手</p>
                 <p class="p2">13号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart2">
                 <p class="p1">水民</p>
                 <p class="p2">14号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart3">
                 <p class="p1">水民</p>
                 <p class="p2">15号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
         </div>
 
@@ -119,23 +134,25 @@
             <div class="cpart1">
                 <p class="p1">杀手</p>
                 <p class="p2">16号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart2">
                 <p class="p1">水民</p>
                 <p class="p2">17号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
             <div class="cpart3">
                 <p class="p1">水民</p>
                 <p class="p2">18号</p>
-                <img  class="selector" src="img/skill.png">
+                <img  class="selector" src="img/demo1/skill.png">
             </div>
         </div>
 
     </div>
     <footer>
-        <button class="footbotn">结束</button>
+        <a  href="./Demo2.html" class="footbotn">
+            投死
+        </a>
     </footer>
 </body>
 </html>
