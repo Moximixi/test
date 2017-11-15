@@ -1,0 +1,112 @@
+html{
+    font-size: 62.5%;
+     max-width: 320px;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    font-family: "Microsoft YaHei UI";
+    background-color: #f0f0f0;
+     max-width: 320px;
+    margin: 0 auto;
+}
+/************************************************************************************/
+header{
+    background-color: #29bde0;
+    position: fixed;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+     max-width: 320px;
+    margin: 0 auto;
+}
+.himg{
+    margin: 1.5rem 2rem;
+}
+
+/****************content部分**************************/
+.content{
+    position: relative;
+    top: 7rem;
+    height: 5rem;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+     max-width: 320px;
+    margin: 0 auto;
+
+}
+.content p{
+    font-size: 1.5rem;
+    color: #9a9a9a;
+    text-align: center;
+    margin: 1.5rem auto;
+}
+.cimg{
+    float: right;
+   margin: 1rem 1rem;
+}
+
+/***************************footer部分**************************************************/
+footer{
+    position: relative;
+    top: 5rem;
+    background-color: #ffffff;
+    margin: 5rem 2rem;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+     max-width: 320px;
+    margin: 4rem auto;
+}
+.special{/*捉鬼游戏专门单独设置样式*/
+    text-align: center;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: #fbb435;
+    border-bottom: 1px solid #fbb435;
+}
+.bot1{
+    border: 1px solid #69d1e9;
+    height: 6rem;
+    text-align: center;
+    margin: 1rem 2rem;
+    border-radius: .5rem;
+    background-color: #69d1e9;
+}
+.bot1 p{
+    margin: 1.5rem auto;
+    font-size: 2rem;
+}
+a:link,a:hover{
+    text-decoration: none;
+}
+.fcontent{
+    text-align: center;
+}
+.rightcenter{
+    float: right;
+    margin:2rem auto;
+}
+.rightcenter.small{
+    width: 20px;
+    height: 35px;
+}
+/*四个点*/
+.fourdot{
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    width: .8rem;
+    height: .8rem;
+    background-color:#eaeaea;
+    margin: .8rem;
+    border-radius: 50%;
+    border-color:#eaeaea ;
+}
+.dot:hover{
+    background-color:#6ccdd5 ;
+    border: .1rem solid #6ccdd5;
+}
+}

@@ -1,0 +1,117 @@
+html{
+    font-size: 62.5%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    font-family: "Microsoft YaHei UI";
+    max-width: 320px;
+    margin: 0 auto;
+}
+/*****************************************************************************************/
+
+header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    padding: 1rem 2rem;
+    height: 5rem;
+    border-bottom:1.5px solid #74d4eb;
+    justify-content: space-between;
+    background-color: #29bde0;
+    max-width: 320px;
+    margin: 0 auto;
+}
+header p{
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+img.small{
+    width: 3rem;
+    height: 3rem;
+}
+img.big{
+    width: 24rem;
+    height: 14rem;
+}
+
+/**********************content*********************/
+.content{
+    position: relative;
+    padding-top: 4rem;
+    width: 100%;
+    top: 4.9rem;
+    background-color:#29bde0 ;
+    overflow: hidden;/*解决了content有点窄的问题*/
+}
+/* content1*/
+
+.content1 img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+.page{
+    width: 27rem;
+    display: block;
+    margin: 0 auto;
+}
+.content1 p{
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/*content2*/
+.content2{
+    background-color: #ffffff;
+    padding-bottom: 5rem;
+}
+.xian{
+    border-bottom: 1px solid #d5d5d5;
+}
+.page2{
+    display: block;
+    margin:  0 auto;
+    width: 27rem;
+    padding: 1rem 0;
+}
+.page2 p{
+    color: #a6a6a6;
+}
+
+/**********************footer部分*************************************/
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: rgba(41,189,224,0.4);
+    max-width: 320px;
+    margin: 0 auto;
+}
+.bot1{
+    float: left;
+    margin: 1rem .8rem;
+    text-align: center;
+    height: 3rem;
+    width:135px;
+    background-color: rgba(246,111,111,0.8);
+    border-radius: .5rem;
+}
+.bot2{
+    float: left;
+    margin: 1rem .8rem;
+    text-align: center;
+    height: 3rem;
+    width:135px;
+    background-color: rgba(251,180,53,0.8);
+    border-radius: .5rem;
+
+}
+
+a:hover,a:link {
+    text-decoration: none;
+}
+
