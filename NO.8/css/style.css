@@ -1,0 +1,342 @@
+html{
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei UI";
+}
+body{
+    margin: 0;
+    background-color: #fafafa;
+}
+/* container部分(大部分靠借鉴，知识漏洞太多了！要及时补救啊！)*/
+.tel{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #29b078;
+}
+
+.wrap-img {
+    height: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .wrap-img {
+        height: 28px;
+    }
+}
+
+.wrap-img a {
+    display: inline-block;
+    text-decoration: none;
+    width: 28px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jnshu-mobile-img {
+    background-image: url(../img/jnshu-mobile-img.png);
+}
+
+.weixin-share-img {
+    background-image: url(../img/weixin-share-img.png);
+}
+
+.weibo-share-img {
+    background-image: url(../img/weibo-share-img.png);
+}
+
+/*导航栏部分*/
+.navi{
+    position: relative;
+    width: 100%;
+}
+.header-nav-wrap{
+    background-color: #29b078;
+}
+.navbar-brand{
+    padding: 8px 15px;
+}
+
+img.logo { /*定义logo图片的尺寸*/
+    width: 6rem;
+    height: 2.5rem;
+}
+.navbar-nav{
+    float: right;
+    margin-right: -30px;
+}
+.navbar-nav > li a {
+    background: #29b078;
+    color: #ffffff !important;/*!important:提高指定CSS样式规则的应用优先权。*/
+}
+.navbar-nav > li a:hover{
+    border-bottom: 2px solid #ffffff;
+    color: black !important;
+}
+@media only screen and (max-width: 767px) {/*定义宽度小于767px时<a>和文字的样式*/
+    .navbar-nav {/*定义展开居中样式*/
+        margin:0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav > li a {
+        height: 50px;
+        line-height: 30px;
+        background: #29b078;
+        color: #fff !important;
+    }
+
+}
+
+/*轮播图部分*/
+.lunbo{
+    position: relative;
+    top: -1.55rem;
+}
+
+/*图标(icon)部分*/
+.icon{
+    position: relative;
+    margin-top: 6rem;
+}
+.effective{
+    background: url("../img/rocket.jpg") no-repeat;
+    background-position: center top;
+    border: 1px solid #fafafa;
+    height: 15rem;/*定义了img-contain的高度*/
+}
+.ruler{
+    background: url("../img/book.jpg") no-repeat;
+    background-position: center top;
+    border: 1px solid #fafafa;
+    height: 15rem;
+}
+.relation{
+    background: url("../img/people.jpg") no-repeat;
+    background-position: center top;/*将图标作为背景！*/
+    border: 1px solid #fafafa;
+    height: 15rem;
+}
+.icon span{
+    color: #999999;
+}
+.img-contain p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 6rem;
+}
+
+.count p{
+    font-size: 1.5rem;
+    color: #26a26f;
+    background: url("../img/person.jpg") no-repeat;
+    background-position: left center;
+    padding-left: 20px;/*将图标作为背景*/
+}
+
+@media only screen and (max-width: 992px){
+    .img-contain span{
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+    .count{
+        display: flex;
+        flex-direction: column;
+        align-items: center;/*水平居中*/
+        justify-content: center;/*垂直居中*/
+    }
+}
+
+/*学习路径部分*/
+.study-path{
+    margin-top: 2rem;
+}
+.title{
+    font-size: 1.5rem;
+    margin: 4rem 0 ;
+}
+.step-path{
+    display: flex;
+    justify-content: space-between;
+    height: 180px;
+    padding: 0;
+}
+.number{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #999;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;/*让数字向下移动*/
+    color: #29b078;
+}
+.path-contain{
+    width: 10rem;
+    color: #999999;
+}
+@media only screen and (max-width: 992px) {
+    .path-contain{
+        width: 15rem;
+        color: #999999;
+        font-size: 1.2rem;
+    }
+}
+.next{
+    width: 5rem;
+    height: 5rem;
+    background: url("../img/arrows.jpg") no-repeat;
+}
+.step-path:last-child .next{
+    background-image: none;/*将最后一个arrow去掉，用了last-chilld！*/
+}
+
+/*优秀学员部分*/
+.student{
+    margin: 15px 0;
+    padding: 0 15px;
+    text-align: center;
+    height: 360px;
+    background-color: #fff;
+}
+.dalao{
+    margin: 2rem 0;
+}
+.person{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.intro{
+    color: #a0a0a0;
+}
+
+/*四个点部分*/
+.four-dot{
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #a0a0a0;
+    margin: 1rem 1rem;
+}
+.dot:hover{
+    background-color: #29b078;
+}
+
+/*企业部分*/
+.company a{
+    border: 1px solid #ffffff;
+    background-color: #fff;
+    margin: 2rem 1.5rem;
+    height: 15rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.company a:hover{
+  border-color: #a0a0a0;
+}
+.Alibaba{
+    background-image: url("../img/Alibaba.jpg") ;
+}
+.JinShan{
+    background-image: url("../img/jingshan.jpg");
+}
+.HuanXin{
+    background-image: url("../img/huanxin.jpg");
+}
+.RongLian{
+    background-image: url("../img/yunliantong.jpg");
+}
+.YunCuChun{
+    background-image: url("../img/yuncucun.jpg");
+}
+
+/*友情链接*/
+.advertisement{
+    margin-left: 1rem;
+    margin-bottom: 4rem;
+    height: 8rem;
+}
+.advertisement p{
+    display: inline-block;
+    float: left;
+    margin: 1rem 2.5rem;
+    font-size: 1.3rem;
+    color: #999999;
+}
+
+.advertisement p:hover{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .advertisement{
+        margin-bottom: 20rem;
+    }
+
+    .advertisement p{
+        margin: 1rem 1rem;
+        color: #999999;
+    }
+    .advertisement p:active{
+        border-bottom: 1px solid #26a26f;
+        text-decoration: none;
+    }
+}
+
+/*footer部分*/
+@media only screen and (min-width: 992px) {
+    .footer {
+        background-color: #26a26f;
+    }
+
+    .footer p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .footer a {
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        padding-right: .8rem;
+        line-height: 10rem;
+        margin-right: 1rem;
+    }
+
+    .demo {
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width: 992px){
+    .footer {
+        background-color: #26a26f;
+    }
+
+    .footer p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin: 2.5rem 0;
+    }
+
+    .footer a {
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        padding-right: .8rem;
+        margin-right: 1rem;
+    }
+
+    .demo {
+        margin-bottom: 3rem;
+    }
+}
+
+/*对居中等样式还不够熟练，下次再仔细看一下那个布局文档！*/
+/*搞不懂鼠标放上去为什么会莫名移动.....*/
