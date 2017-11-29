@@ -1,0 +1,227 @@
+html{
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei UI";
+}
+body{
+    margin: 0;
+    background-color: #fafafa;
+}
+
+/*header部分*/
+.tel{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #29b078;
+}
+.wrap-img {
+    height: 40px;
+}
+@media only screen and (max-width: 767px) {
+    .wrap-img {
+        height: 28px;
+    }
+}
+.wrap-img a {
+    display: inline-block;
+    text-decoration: none;
+    width: 28px;
+    height: 100%;/*a要有高度！*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jnshu-mobile-img {
+    background-image: url(../img/jnshu-mobile-img.png);
+}
+
+.weixin-share-img {
+    background-image: url(../img/weixin-share-img.png);
+}
+
+.weibo-share-img {
+    background-image: url(../img/weibo-share-img.png);
+}
+
+
+/*导航栏部分*/
+.navi{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+.header-nav-wrap{
+    background-color: #29b078;
+}
+.navbar-brand{
+    padding: 8px 15px;
+}
+
+img.logo { /*定义logo图片的尺寸*/
+    width: 6rem;
+    height: 2.5rem;
+}
+.navbar-nav{
+    float: right;
+    margin-right: -30px;
+}
+.navbar-nav > li a {
+    background: #29b078;
+    color: #ffffff !important;/*!important:提高指定CSS样式规则的应用优先权。*/
+}
+.navbar-nav > li a:hover{
+    border-bottom: 2px solid #ffffff;
+    color: black !important;
+}
+@media only screen and (max-width: 767px) {/*定义宽度小于767px时<a>和文字的样式*/
+    .navbar-nav {/*定义展开居中样式*/
+        margin:0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav > li a {
+        height: 50px;
+        line-height: 30px;
+        background: #29b078;
+        color: #fff !important;
+    }
+}
+
+/*图片部分*/
+.photo{
+    margin-top: -2rem;
+}
+
+/*链式导航栏部分*/
+.link-line{
+    padding-left: 3rem;
+    line-height: 4rem;
+}
+
+.link-line a{
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+}
+.link-line a:hover{
+    color: #b3b3b3;
+}
+.link-line p{
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.link-line span{
+    font-size: 1.5rem;
+    color: #29b078;
+}
+/*介绍主体部分*/
+.left{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*居中样式,并且保证红点在一条直线上*/
+}
+.left p{
+    font-weight: bold;
+    font-size: 2rem;
+    border-bottom: 1px solid #dadada;
+    line-height: 4rem;
+    width: 100%;
+}
+.left ul{
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.left li{
+    line-height: 4rem;
+    font-size: 1.5rem;
+    color: #29b078;
+}
+li span{
+    display: inline-block;/*span原本是内联元素*/
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+    border: 1px solid #ff650e;
+}
+.active span{
+    background-color:#ff650e ;
+}
+
+
+
+.right{
+    background-color: #ffffff;
+    margin: 0 4%;
+}
+.right-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;/*让span居中*/
+}
+.right-head span{
+    font-size: 1.5rem;
+}
+.right-main{
+     border-top: 1px solid #dadada;
+}
+.right-main p{
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+
+/*footer部分(同Demo)*/
+@media only screen and (min-width: 992px) {
+    .footer {
+        background-color: #26a26f;
+    }
+
+    .footer p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .footer a {
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        padding-right: .8rem;
+        line-height: 10rem;
+        margin-right: 1rem;
+    }
+
+    .demo {
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width: 992px){
+    .footer {
+        background-color: #26a26f;
+    }
+
+    .footer p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin: 2.5rem 0;
+    }
+
+    .footer a {
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        padding-right: .8rem;
+        margin-right: 1rem;
+    }
+
+    .demo {
+        margin-bottom: 3rem;
+    }
+}
+

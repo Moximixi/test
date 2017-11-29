@@ -1,0 +1,231 @@
+html{
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei UI";
+}
+body{
+    margin: 0;
+    background-color: #fafafa;
+}
+
+/*header部分*/
+.tel{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #29b078;
+}
+.wrap-img {
+    height: 40px;
+}
+@media only screen and (max-width: 767px) {
+    .wrap-img {
+        height: 28px;
+    }
+}
+.wrap-img a {
+    display: inline-block;
+    text-decoration: none;
+    width: 28px;
+    height: 100%;/*a要有高度！*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jnshu-mobile-img {
+    background-image: url(../img/jnshu-mobile-img.png);
+}
+
+.weixin-share-img {
+    background-image: url(../img/weixin-share-img.png);
+}
+
+.weibo-share-img {
+    background-image: url(../img/weibo-share-img.png);
+}
+
+
+/*导航栏部分*/
+.navi{
+    position: relative;
+    width: 100%;
+}
+.header-nav-wrap{
+    background-color: #29b078;
+}
+.navbar-brand{
+    padding: 8px 15px;
+}
+
+img.logo { /*定义logo图片的尺寸*/
+    width: 6rem;
+    height: 2.5rem;
+}
+.navbar-nav{
+    float: right;
+    margin-right: -30px;
+}
+.navbar-nav > li a {
+    background: #29b078;
+    color: #ffffff !important;/*!important:提高指定CSS样式规则的应用优先权。*/
+}
+.navbar-nav > li a:hover{
+    border-bottom: 2px solid #ffffff;
+    color: black !important;
+}
+@media only screen and (max-width: 767px) {/*定义宽度小于767px时<a>和文字的样式*/
+    .navbar-nav {/*定义展开居中样式*/
+        margin:0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav > li a {
+        height: 50px;
+        line-height: 30px;
+        background: #29b078;
+        color: #fff !important;
+    }
+
+}
+
+
+/*链式导航栏部分*/
+.link-line{
+    padding-left: 2rem;
+    border-bottom: 1px solid #dadada;
+    line-height: 2.5rem;
+}
+
+.link-line a{
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+}
+.link-line a:hover{
+    color: #b3b3b3;
+}
+.link-line p{
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.link-line span{
+    font-size: 1.5rem;
+    color: #29b078;
+}
+
+/*层次导航栏部分*/
+.levels p{
+    display: inline-block;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    color: #999999;
+}
+.levels a{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 2rem;
+    color: #000000;
+    text-decoration: none;
+    line-height: 3rem;
+}
+.levels a:hover{
+    color: #ffffff;
+    background-color: #29b078;
+}
+
+/*前端开发方向*/
+.design{
+    background-color: #ffffff;
+    margin: 2rem 0rem;
+    padding: 1rem 1rem;
+}
+.derection {
+    border-bottom: 1px solid #dadada;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+.desien-head p{
+    font-size: 1.5rem;
+    font-weight: bold;/*web工程师进行设置*/
+}
+tbody img{
+    margin: 0 .5rem;/*设置星星的间距*/
+}
+.special{
+    font-size: 1.5rem;/*“薪资待遇”进行设置*/
+}
+.touxiang{
+    margin: 1rem;/*对头像进行设置*/
+}
+.design-main p{/*对提示部分进行设置*/
+    margin-top: -1.5rem;
+    border-top: 1px solid #a0a0a0;
+    line-height: 2rem;
+    font-weight: bold;
+}
+.design-all{/*对阴影部分进行设置*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+}/*让design-all占据整个版面并隐藏！*/
+.design:hover .design-all {
+    display: inline;/*鼠标放在design上的时候design-all出现*/
+}
+
+/*footer部分(同Demo)*/
+@media only screen and (min-width: 992px) {
+    .footer {
+        background-color: #26a26f;
+    }
+
+    .footer p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .footer a {
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        padding-right: .8rem;
+        line-height: 10rem;
+        margin-right: 1rem;
+    }
+
+    .demo {
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width: 992px){
+    .footer {
+        background-color: #26a26f;
+    }
+
+    .footer p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin: 2.5rem 0;
+    }
+
+    .footer a {
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        padding-right: .8rem;
+        margin-right: 1rem;
+    }
+
+    .demo {
+        margin-bottom: 3rem;
+    }
+}
