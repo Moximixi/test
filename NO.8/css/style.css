@@ -198,10 +198,14 @@ img.logo { /*定义logo图片的尺寸*/
 /*优秀学员部分*/
 .student{
     margin: 15px 0;
-    padding: 0 15px;
+    padding: 1px 15px;
     text-align: center;
     height: 360px;
     background-color: #fff;
+    box-shadow: 10px 10px 5px #888888;
+}
+.student:hover{
+    border: 1px solid #a0a0a0;
 }
 .dalao{
     margin: 2rem 0;
@@ -234,7 +238,7 @@ img.logo { /*定义logo图片的尺寸*/
 .company a{
     border: 1px solid #ffffff;
     background-color: #fff;
-    margin: 2rem 1.5rem;
+    margin: 2rem 1rem;
     height: 15rem;
     background-position: center center;
     background-repeat: no-repeat;
