@@ -105,6 +105,7 @@ header{
     z-index: 10;
 }
 
+
   /*横线效果*/
 .box-step:after{
     z-index: 1;/*序号在横线的上一层*/
@@ -125,6 +126,14 @@ header{
 .box-step-0~li{
     color:#ccc ;/*与上面同理*/
 }
+
+.box-step:hover:before,.box-step:hover:after{
+    background-color:  #ff7f02;
+}
+.box-step:hover{
+    color:  #ff7f02;/*注意：hover在before，after的前面*/
+}
+
 
   /*提示部分*/
   .tips p{
