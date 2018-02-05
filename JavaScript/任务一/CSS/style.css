@@ -1,0 +1,33 @@
+html{
+    font-size: 62.5%;
+    font-family: "Microsoft YaHei UI";
+}
+box{
+    padding: 1% 0 0 1%;
+}
+fang{
+    background-color: #FF8C00;
+    margin: 0 3% 3% 0 ;
+    padding: 30% 0 0 0  ;
+    width: 30%;
+    float: left;
+    border-radius: 5%;
+}
+button{
+    color: #FF8C00;
+    font-size: 1.5rem;
+    border: 1px solid #FF8C00;
+    background-color: #ffffff;
+    width: 95%;
+    height: 5rem ;
+    margin: 1% 2%;
+}
+button:hover{
+    color: #ffffff;
+    font-size: 1.5rem;
+    border: 1px solid #FF8C00;
+    background-color: #FF8C00;
+    width: 95%;
+    height: 5rem ;
+    margin: 1% 2%;
+}
