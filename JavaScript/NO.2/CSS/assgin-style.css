@@ -1,0 +1,82 @@
+html{
+    font-size: 62.5%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    font-family: "Microsoft YaHei UI";
+    background-color: #f0f0f0;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/******************************************************************************/
+header{
+    background-color: #29bde0;
+}
+header img{
+    margin: .5rem .5rem;
+}
+
+/*content*/
+img.img-circle{
+    width: 60px;
+    height: 60px;
+}
+p{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem auto;
+}
+span{
+    font-size: 1.5rem;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.peibi{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*hr*/
+hr{
+    margin-top: 20rem;
+    height:2px;
+    border:none;
+    border-top:2px dotted #185598;
+}
+
+
+/*footer*/
+a{
+    text-decoration: none;
+    border: 1px solid #fbb435;
+    border-radius: 10%;
+    color: #ffffff;
+    background-color: #fbb435;
+    height: 2.5rem;
+    width: 35%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.but{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 5rem;
+}
+
+/*
+下次任务:
+1.完成js算法部分
+2.扫尾工作
+*/
+

@@ -1,0 +1,62 @@
+html{
+    font-size: 62.5%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    font-family: "Microsoft YaHei UI";
+    background-color: #f0f0f0;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/******************************************************************************/
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #29bde0;
+}
+header p{
+ font-size: 2rem;
+    color: #fff;
+}
+
+content{
+    position: relative;
+
+}
+.but1,.but2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color:#29bde0 ;
+}
+.but1{
+    padding-bottom: 2rem;
+}
+a{
+    text-decoration: none;
+    border: 1px solid #fbb435;
+    border-radius: 10%;
+    color: #ffffff;
+    background-color: #fbb435;
+    height: 2.5rem;
+    width: 35%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+img.tiny{
+    width:300px;
+    height: 500px;
+}
+/*下次任务
+1.剪裁一下图片（太大了）
+2.content设置一下背景颜色
+*/
