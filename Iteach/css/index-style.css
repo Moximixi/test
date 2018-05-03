@@ -1,0 +1,28 @@
+.starter {
+    padding-top: 70px;
+}
+
+.ke {
+    padding-top: 20px;
+}
+.icon img{
+    padding: 10px 10px;
+}
+/*左边导航栏部分*/
+.jnNav{
+    position: absolute;
+    background-color: white;
+}
+#nav li a[href='#']{/*先设置到这里，后面再改href*/
+    font-size: 1.4em;
+}
+#nav li a:hover{
+    text-decoration: none;
+}
+#nav li{
+    list-style: none;
+    line-height: 4.5em;
+}
+.jnNav a{
+    font-size: .3em;
+}
