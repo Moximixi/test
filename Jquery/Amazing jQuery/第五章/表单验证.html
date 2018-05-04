@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <style>
+        body { font:12px/19px Arial, Helvetica, sans-serif; color:#666;}
+        form div { margin:5px 0;}
+        .int label { float:left; width:100px; text-align:right;}
+        .int input { padding:1px 1px; border:1px solid #ccc;height:16px;}
+        .sub { padding-left:100px;}
+        .sub input { margin-right:10px; }
+        .formtips{width: 200px;margin:2px;padding:2px;}
+        .onError{
+            background:#FFE0E9;
+        }
+        .onSuccess{
+            background:#E9FBEB;
+        }
+        .high{
+            color:red;
+        }
+    </style>
+    <script>
+        $(function () {//添加必填红星函数
+            $("form :input.required ").each(function () {//.required前面不能有空格
+                var $RedStar=$("<strong class='high'>*</strong>");
+                $(this).parent().append($RedStar);
+            })
+
+            $("form :input").blur(function () {//验证文本和邮箱
+                var $parent=$(this).parent();
+                $parent.find(".formtips").remove();//先去掉之前的标记
+                if($(this).is("#username")){
+                    if(this.value==""||this.value.length<6){
+                        var error_message="请输入至少6位的用户名";//一句话不用转换成jquery对象
+                        var $a=$("<span class='formtips onError'>"+error_message+"</span>");
+                        $parent.append($a);
+                    }
+                    else{
+                        var success_message="格式正确"
+                        var $b=$("<span class='formtips onSuccess'>"+success_message+"</span>");
+                        $parent.append($b);
+                    }
+                }
+                if($(this).is("#email")){
+                    if(this.value==""||( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) )){
+                        var error_message="请输入正确的邮箱格式";
+                        $parent.append($("<span class='formtips onError'>"+error_message+"</span>"));
+                    }
+                    else {
+                        var success_message="格式正确";
+                        $parent.append($("<span class='formtips onSuccess'>"+success_message+"</span>"));
+                    }
+                }
+            }).focus(function () {
+                $(this).triggerHandler("blur");
+            }).keyup(function () {
+                $(this).triggerHandler("blur");//给更多的事件添加检查功能
+            })
+
+            $("#res").click(function () {//重置函数
+                $(".formtips").remove();
+            })
+
+            $('#send').click(function () {//发送函数
+                $("form :input.required").trigger('blur');//自动检查一遍格式
+                var numError=$('form .onError').length;//获得错误提示的数量
+                if(numError){
+                    alert("对不起，注册失败，请检查你的格式");
+                    return false;}//如果有错误提示，则不跳转
+                alert("恭喜你，注册成功！");
+            })
+        })
+    </script>
+</head>
+<body>
+    <form method="post" action="">
+        <div class="int">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" class="required">
+        </div>
+        <div class="int">
+            <label for="email">邮箱:</label>
+            <input type="text" id="email" class="required">
+        </div>
+        <div class="int">
+            <label for="personinfo">个人资料:</label>
+            <input type="text" id="personinfo">
+        </div>
+        <div class="sub">
+            <input type="submit" value="提交" id="send">
+            <input type="reset" id="res">
+        </div>
+    </form>
+</body>
+</html>

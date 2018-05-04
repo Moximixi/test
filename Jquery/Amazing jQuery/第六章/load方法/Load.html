@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Load方法</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .comment {
+            margin: 10px 0px;
+            padding:0px 5px;
+            background: #DDD;
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#send").click(function () {
+                $('.reset').load("insertText.html .para")
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="send">Ajax获取</button>
+<div class="comment">
+    <p>已有评论：</p>
+</div>
+<div class="reset">
+</div>
+</body>
+</html>

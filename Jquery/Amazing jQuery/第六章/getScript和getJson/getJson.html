@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getJson</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("#send").click(function(){
+				$.getJSON('test.json',function(data){//注意这里参数有个data
+					//$('.reset').empty();
+					var html="";
+					$.each(data,function(index,comment){
+						html+='<h3>'+comment.username+':</h3><p>'+comment.content+'</p>';
+					})
+					$('.reset').append(html);
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+<button id="send">check</button>
+<p>content:</p>
+<div class="reset"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #fff;
+            font: 80% Arial, Helvetica, sans-serif;
+            color: #555;
+            line-height: 180%;
+        }
+
+        img {
+            border: none;
+        }
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            display: inline;
+            margin-right: 10px;
+            border: 1px solid #AAAAAA;
+        }
+
+        /* tooltip */
+        #tooltip {
+            position: absolute;
+            border: 1px solid #ccc;
+            background: #333;
+            padding: 2px;
+            display: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<h3>有效果：</h3>
+<ul>
+    <li><a href="IMG/apple_1_bigger.jpg" class="tool" title="苹果 iPod"><img src="IMG/apple_1.jpg"
+                                                                              alt="苹果 iPod"/></a></li>
+    <li><a href="IMG/apple_2_bigger.jpg" class="tool" title="苹果 iPod nano"><img src="IMG/apple_2.jpg"
+                                                                                   alt="苹果 iPod nano"/></a></li>
+    <li><a href="IMG/apple_3_bigger.jpg" class="tool" title="苹果 iPhone"><img src="IMG/apple_3.jpg"
+                                                                                alt="苹果 iPhone"/></a></li>
+    <li><a href="IMG/apple_4_bigger.jpg" class="tool" title="苹果 Mac"><img src="IMG/apple_4.jpg" alt="苹果 Mac"/></a>
+    </li>
+</ul>
+<br/><br/><br/><br/>
+<h3>无效果：</h3>
+<ul>
+    <li><a href="IMG/apple_1_bigger.jpg" title="苹果 iPod"><img src="IMG/apple_1.jpg" alt="苹果 iPod"/></a></li>
+    <li><a href="IMG/apple_2_bigger.jpg" title="苹果 iPod nano"><img src="IMG/apple_2.jpg" alt="苹果 iPod nano"/></a>
+    </li>
+    <li><a href="IMG/apple_3_bigger.jpg" title="苹果 iPhone"><img src="IMG/apple_3.jpg" alt="苹果 iPhone"/></a></li>
+    <li><a href="IMG/apple_4_bigger.jpg" title="苹果 Mac"><img src="IMG/apple_4.jpg" alt="苹果 Mac"/></a></li>
+</ul>
+<script src="./style.js"></script>
+</body>
+</html>

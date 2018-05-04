@@ -1,0 +1,9 @@
+ul li{
+    list-style: none;
+    line-height: 2em;
+}
+.starter a{
+    text-decoration: none;
+}
+
+/*做一个类似hexo文章分小标题的功能*/

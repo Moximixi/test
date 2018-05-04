@@ -1,12 +1,6 @@
-.starter {
-    padding-top: 70px;
-}
 
 .ke {
     padding-top: 20px;
-}
-.icon img{
-    padding: 10px 10px;
 }
 /*左边导航栏部分*/
 .jnNav{
@@ -24,5 +18,5 @@
     line-height: 4.5em;
 }
 .jnNav a{
-    font-size: .3em;
+    font-size: .7em;
 }
