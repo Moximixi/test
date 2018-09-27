@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>多个物体同时划出</title>
+	<style>
+		body,ul{
+			margin:0;
+			padding:0;
+		}
+		ul,li{
+			list-style:none;
+		}
+		li{
+			width:100px;
+			height:100px;
+			margin:50px 0;
+			background-color:#ABCDEF;
+		}
+	</style>
+	<script>
+		
+		window.onload=function(){
+			var ali=document.getElementsByTagName('li');
+			for(var i=0;i<ali.length;i++){
+				ali[i].timer=null;
+				ali[i].onmouseover=function(){
+					Move(this,400);
+				}
+				ali[i].onmouseout=function(){
+					Move(this,100);
+				}
+			}
+		}
+		function Move(obj,target){
+			clearInterval(obj.timer);
+			var speed=(target-obj.offsetWidth)/8;//速度越来越平缓
+			speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			obj.timer=setInterval(function(){
+				if(obj.offsetWidth>400||obj.offsetWidth<100){
+					obj.style.width=100+'px';
+					clearInterval(obj.timer);
+				}
+				if(obj.offsetWidth==target)
+					clearInterval(obj.timer);
+				else{
+					obj.style.width=obj.offsetWidth+speed+'px';
+				}
+			},30);
+		}
+	</script>
+</head>
+<body>
+<ul>
+	<li><a href="#">柱状图</a></li>
+	<li><a href="#">饼图</a></li>
+	<li><a href="#">折线图</a></li>
+</ul>
+</body>
+</html>

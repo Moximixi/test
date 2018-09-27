@@ -1,9 +1,0 @@
-#slideshow {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/*定义一个用于显示的正方形，注意这里的position是relative！*/
