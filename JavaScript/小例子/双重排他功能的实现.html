@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		span.current{
+			background-color: red;
+			 
+		}
+		li.current{
+			display: block;/*将原本隐藏部分改为块级元素*/
+		}
+		.box{
+			margin:100px auto;
+			overflow: hidden;/*超过部分先隐藏起来*/
+			width: 400px;
+			height: 300px;
+			border:1px solid black;
+		}
+		#hd{
+			height: 50px;
+		}
+		span{
+			width:95px;
+			display: inline-block;
+			line-height: 50px;
+			text-align: center;
+			cursor: pointer;
+		}
+		ul{
+			padding:0;
+		}
+		li{
+			height: 250px;
+			list-style: none;
+			display: none;/*先让所有li隐藏起来*/
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<div id="hd">
+			<span class="current">体育</span>
+			<span>娱乐</span>
+			<span>科技</span>
+			<span>军事</span>
+		</div>
+		<div id="bd">
+			<ul>
+				<li class="current">体育板块</li>
+				<li>娱乐版块</li>
+				<li>科技板块</li>
+				<li>军事版块</li>
+			</ul>
+		</div>
+	</div>
+	<script src="common.js"></script>
+	<script>
+		var hd=my$("hd");
+		var span=hd.getElementsByTagName("span");
+		var bd=my$("bd");
+		var li=bd.getElementsByTagName("li");
+
+
+		for(var i=0;i<span.length;i++){
+			span[i].setAttribute("index",i);//将span的索引用一个自定义属性span保存起来
+			span[i].onclick=function(){
+				var index=this.getAttribute("index");//index就是当前span的索引
+				for(var j=0;j<span.length;j++){
+					span[j].removeAttribute("class");//循环移除span的current
+					li[j].removeAttribute("class");//循环移除li的current
+				}
+				this.className="current";//当前span赋予current样式
+				li[index].className="current";//给同样位置的li赋予current样式
+			}
+		}
+	</script>
+</body>
+</html>

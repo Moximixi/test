@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		(function(win){
+			function Random(){
+
+			};//产生随机数的构造函数
+			Random.prototype.getRandom=function(min,max){//向构造函数中添加方法
+				return Math.floor(Math.random()*(max-min)+min);//获得的随机数范围在min到max之间（包括min，不包括max）
+			};
+			win.Random=Random;//将构造函数Random赋予给window对象,变成全局对象
+		})(window)//window是实参，win是形参
+		var ram=new Random();//实例化
+		console.log(ram.getRandom(5,100));
+	</script>
+</body>
+</html>

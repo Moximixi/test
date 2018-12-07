@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+    div {
+        width: 400px;
+        height: 600px;
+        border: 1px dashed pink;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="创建" id="bt">
+    <div id="bd"></div>
+    <script src="common.js"></script>
+    <script>
+    my$("bt").onclick = function() {
+        //创建元素
+        var pobj = document.createElement("p");
+        setElement(pobj, "这是创建的元素");
+        //pobj.innerText="HAHAH";
+        //追加元素
+        my$("bd").appendChild(pobj);
+    }
+    </script>
+</body>
+
+</html>

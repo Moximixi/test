@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>兼容性测试</title>
+	<style>
+		div{
+			width:400px;
+			height:400px;
+			border:2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<input value="设置" id="input" type="button">
+	<div id="div"></div>
+	<script src="common.js"></script>
+	<script>
+		setElement(div,"hahah");
+		my$("input").onclick=function(){
+			my$("div").innerText="text";
+			getElement(div);
+		}
+		
+	</script>
+</body>
+</html>

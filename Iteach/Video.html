@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/video_style.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navber-header navbar-left"><!--图标部分-->
+                <a class="navber-brand" href="#"> <img class='logo' src="img/logo4.png"></a>
+
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">课程 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Total_Video.html">总览</a></li>
+                        <li class="active"><a href="Video.html">语文</a></li>
+                        <li><a href="Video.html">数学</a></li>
+                        <li><a href="Video.html">地理</a></li>
+                    </ul>
+                </li>
+                <li><a href="About_Us.html">简介</a></li>
+                <li><a href="#">社区</a></li>
+            </ul><!--菜单部分-->
+            <ul class="nav navbar-nav navbar-right"><!--登录注册-->
+                <li class="active"><a href="mySetting.html"><span class="glyphicon glyphicon-user"></span>&nbsp我的</a>
+                </li>
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp登录</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search"><!--搜索框-->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputSearch" value="搜索课程....">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+    </div>
+</nav><!--导航栏-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="page-header">
+                <h3>蓝精灵</h3>
+            </div>
+            <video width="800" height="500" controls loop>
+                <source src="media/240.ogg" type="video/ogg">
+                <source src="media/240.mp4" type="video/mp4">
+                <source src="media/240.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="col-xs-3">
+            <div class="page-header">
+                <h3>更多课程</h3>
+            </div>
+        </div>
+    </div>
+</div><!--视频播放界面-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-9 comment_left">
+            <div class="commentAll">
+                <!--评论区域 begin-->
+                <div class="reviewArea clearfix">
+                    <textarea class="content comment-input" placeholder="你对本次课程有什么看法&hellip;"
+                              onkeyup="keyUP(this)"></textarea>
+                    <a href="javascript:;" class="plBtn">评论</a>
+                </div>
+                <!--评论区域 end-->
+                <!--回复区域 begin-->
+                <div class="comment-show">
+                    <div class="comment-show-con clearfix">
+                        <div class="comment-show-con-img pull-left"><img src="img/header-img-comment_03.png" alt="">
+                        </div>
+                        <div class="comment-show-con-list pull-left clearfix">
+                            <div class="pl-text clearfix">
+                                <a href="#" class="comment-size-name">张三 : </a>
+                                <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
+                            </div>
+                            <div class="date-dz">
+                                <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                <div class="date-dz-right pull-right comment-pl-block">
+                                    <a href="javascript:;" class="removeBlock">删除</a>
+                                    <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
+                                    <span class="pull-left date-dz-line">|</span>
+                                    <a href="javascript:;" class="date-dz-z pull-left"><i
+                                            class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                                </div>
+                            </div>
+                            <div class="hf-list-con"></div>
+                        </div>
+                        <div class="comment-show-con-img pull-left"><img src="img/header-img-comment_03.png" alt="">
+                        </div>
+                        <div class="comment-show-con-list pull-left clearfix">
+                            <div class="pl-text clearfix">
+                                <a href="#" class="comment-size-name">张三 : </a>
+                                <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
+                            </div>
+                            <div class="date-dz">
+                                <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                <div class="date-dz-right pull-right comment-pl-block">
+                                    <a href="javascript:;" class="removeBlock">删除</a>
+                                    <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
+                                    <span class="pull-left date-dz-line">|</span>
+                                    <a href="javascript:;" class="date-dz-z pull-left"><i
+                                            class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                                </div>
+                            </div>
+                            <div class="hf-list-con"></div>
+                        </div>
+                        <div class="comment-show-con-img pull-left"><img src="img/header-img-comment_03.png" alt="">
+                        </div>
+                        <div class="comment-show-con-list pull-left clearfix">
+                            <div class="pl-text clearfix">
+                                <a href="#" class="comment-size-name">张三 : </a>
+                                <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
+                            </div>
+                            <div class="date-dz">
+                                <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                <div class="date-dz-right pull-right comment-pl-block">
+                                    <a href="javascript:;" class="removeBlock">删除</a>
+                                    <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
+                                    <span class="pull-left date-dz-line">|</span>
+                                    <a href="javascript:;" class="date-dz-z pull-left"><i
+                                            class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                                </div>
+                            </div>
+                            <div class="hf-list-con"></div>
+                        </div>
+                        <div class="comment-show-con-img pull-left"><img src="img/header-img-comment_03.png" alt="">
+                        </div>
+                        <div class="comment-show-con-list pull-left clearfix">
+                            <div class="pl-text clearfix">
+                                <a href="#" class="comment-size-name">张三 : </a>
+                                <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
+                            </div>
+                            <div class="date-dz">
+                                <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                <div class="date-dz-right pull-right comment-pl-block">
+                                    <a href="javascript:;" class="removeBlock">删除</a>
+                                    <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
+                                    <span class="pull-left date-dz-line">|</span>
+                                    <a href="javascript:;" class="date-dz-z pull-left"><i
+                                            class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                                </div>
+                            </div>
+                            <div class="hf-list-con"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--回复区域 end-->
+            </div>
+        </div><!--评论区-->
+        <div class="col-xs-3">
+            <div class="page-header">
+                <h3>更多名师</h3>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/33.jpg">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>集美貌与才华于一身</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#"
+                                                                                           class="btn btn-default"
+                                                                                           role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div><!--名师区-->
+    </div>
+</div><!--评论与名师区域-->
+<div class="container">
+    <div class="row text-center icon">
+        <a href="#"><img src="img/wechat.png"></a>
+        <a href="#"><img src="img/sina.png"></a>
+        <a href="#"><img src="img/qq.png"></a>
+        <a href="#"><img src="img/google.png"></a>
+    </div>
+    <div class="row text-center">
+        <p><a href="About_Us.html">关于我们 </a>|<a href="#"> 加入我们 </a>|<a href="#"> 联系我们 </a></p>
+    </div>
+    <div class="row">
+        <p class="text-center">Copyright © 2013-2018 By Liuwenxiao</p>
+    </div>
+</div><!--底部-->
+
+<script type="text/javascript" src="js/jquery.flexText.js"></script>
+<script type="text/javascript" src="js/comment.js"></script>
+</body>
+</html>

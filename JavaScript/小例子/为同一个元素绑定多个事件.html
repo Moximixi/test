@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="button" value="点击" id="btn">
+	<script src="common.js"></script>
+	<script>
+		方法一：使用addEventListener()方法，参数1:事件类型(string),不加"on",参数2:执行函数,事件3：false----谷歌和火狐用
+		my$("btn").addEventListener("click",function(){
+			console.log("反复调用");
+		},false)
+		my$("btn").addEventListener("click",function(){
+			console.log("反复调用");
+		},false)
+		my$("btn").addEventListener("click",function(){
+			console.log("反复调用");
+		},false)
+
+		方法二：attachEvent();参数一:事件类型(string),加"on",参数2：执行函数	-----------IE8专用,现在已经被废弃
+
+		my$("btn").attachEvent("onclick",function(){
+			console.log("再次调用")
+		})
+		my$("btn").attachEvent("onclick",function(){
+			console.log("再次调用")
+		})
+		my$("btn").attachEvent("onclick",function(){
+			console.log("再次调用")
+		})
+
+	</script>
+</body>
+</html>

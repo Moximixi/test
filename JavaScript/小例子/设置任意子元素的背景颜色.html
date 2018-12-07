@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		div{
+			width:400px;
+			height:300px;
+			border:1px solid red;
+		}
+	/*	p{
+			background-color: red;
+		}*/
+	</style>
+</head>
+<body>
+	<input type="button" id="btn" value="变色">
+	<div id="div">
+		<p>p1</p>
+		<p>p2</p>
+		<span>span1</span>
+		<span>span2</span>
+		<a href="https://baidu.com">百度</a>
+	</div>
+	<script src="common.js"></script>
+	<script>
+		my$("btn").onclick=function(){
+			var div=my$("div");
+			var nodes=div.childNodes;
+			for(var i=0;i<nodes.length;i++){
+				if(nodes[i].nodeType==1&&nodes[i].nodeName=="P"){//判断节点类型和名字
+					//console.log(nodes[i]);
+					nodes[i].style.backgroundColor="red";//设置背景颜色
+				}
+			}
+		}
+	</script>
+</body>
+</html>

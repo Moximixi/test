@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>通过name改变输入的值</title>
+</head>
+<body>
+	<input type="button" value="change" id="btn">
+	<input type="text" value="原始值"  name="name1"><br>
+	<input type="text" value="原始值" name="name1"><br>
+	<input type="text" value="原始值" name="name2"><br>
+	<input type="text" value="原始值" name="name1"><br>
+	<input type="text" value="原始值" name="name2"><br>
+	<input type="text" value="原始值" name="name2">
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			var inputs=document.getElementsByName("name1");
+			for(var i=0;i<inputs.length;i++){
+				inputs[i].value="已将改变了！";
+			}
+		}
+	</script>
+</body>
+</html>

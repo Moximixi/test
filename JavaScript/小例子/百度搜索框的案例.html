@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		#center{
+		    width: 400px;
+            height: 400px;/*设置垂直/水平居中，一定要设置宽度和高度*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+		}
+		#txt{
+			width:250px;
+		}
+		input{
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+	<div id="center">
+		<input type="text" id="txt">
+		<input type="button" value="搜索">
+	</div>
+
+	<script src="common.js"></script>
+	<script>
+		//通过后端从数据库传来
+		var keywords=["傅首尔打董婧","墨西哥停尸卡车","欧足联调查C罗","马云回应转移家产","错峰出行APP","风暴阿里袭击英国","上海首批出租车","园长猥亵儿童","马云爸爸","马爸爸","马儿哪里去了"];
+		my$("txt").onkeyup=function(){
+			var val=this.value;//.value是属性，不加()
+			//每次输入之前先删除下拉框------------坑1
+			if(my$("down")){
+				my$("center").removeChild(my$("down"));
+			}
+			var tempArr=[];//用于存放符合搜索条件的临时数组
+			//向临时数组里面添加数据
+			for(var i=0;i<keywords.length;i++){
+				if(keywords[i].indexOf(val)==0){//注意"O"大写
+					tempArr.push(keywords[i]);
+				}
+			}
+			//删除条件判断-----------------坑2
+			if(this.value.length==0||tempArr.length==0){
+				if(my$("down")){
+					my$("center").removeChild(my$("down"));
+				}
+				return;
+			}
+			//创建下拉框div
+			var divobj=document.createElement("div");
+			my$("center").appendChild(divobj);
+			divobj.id="down";
+			divobj.style.width="250px";
+			//divobj.style.height="200px";//完全可以不设置高度
+			divobj.style.border="1px solid red";
+
+			//将临时数组的数据插入下拉框当中
+			for(var i=0;i<tempArr.length;i++){
+			var dibp=document.createElement("p");
+			dibp.style.cursor="pointer";
+			setElement(dibp,tempArr[i]);
+			my$("down").appendChild(dibp);
+
+			//为p元素增加事件
+			function f1(){
+				this.style.backgroundColor="yellow"
+			}
+			function f2(){
+				this.style.backgroundColor="white";
+			}
+			dibp.addEventListener("mouseover",f1,"false");
+			dibp.addEventListener("mouseout",f2,"false");
+		}
+
+			console.log(tempArr);
+		}
+	</script>
+</body>
+</html>

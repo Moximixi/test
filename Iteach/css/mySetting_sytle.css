@@ -1,0 +1,31 @@
+.content{
+    background-color:#F8FAFC;
+    padding: 20px 0;
+}
+.content span{
+    line-height: 40px;
+    margin-left: 20px;
+}
+.content button{
+    margin: 0 10px;
+    border-radius: 20px;
+}
+.content button img{
+    padding-right: 10px;
+}
+.content button a{
+    color: #fff;
+    text-decoration: none;
+}
+.content button a:hover{
+    color: #fff;
+}
+.myseeting{
+    padding: 25px 0;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.icon1 img{
+    padding: 10px 10px;
+}

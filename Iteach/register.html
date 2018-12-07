@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <style>
+        button a{
+            color: #fff;
+        }
+        button a:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navber-header navbar-left"><!--图标部分-->
+                <a class="navber-brand" href="#"> <img class='logo' src="img/logo4.png"></a>
+
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">课程 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Video.html">语文</a></li>
+                        <li><a href="Video.html">数学</a></li>
+                        <li><a href="Video.html">地理</a></li>
+                        <li><a href="Video.html">化学</a></li>
+                    </ul>
+                </li>
+                <li><a href="About_Us.html">简介</a></li>
+                <li><a href="#">社区</a></li>
+            </ul><!--菜单部分-->
+            <ul class="nav navbar-nav navbar-right"><!--登录注册-->
+                <li class="active"><a href="mySetting.html"><span class="glyphicon glyphicon-user"></span>&nbsp我的</a>
+                </li>
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp登录</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search"><!--搜索框-->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputSearch" value="搜索课程....">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+    </div>
+</nav><!--导航栏-->
+<div class="container">
+    <form role="form" class="col-xs-6">
+        <div class="form-group">
+            <label for="name">名称：</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+        </div><!--姓名-->
+        <div class="form-group">
+            <label>性别：</label>
+            <label class="radio-inline">
+                <input type="radio" name="radio2" value="option2"> 男
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="radio2" value="option2"> 女
+            </label>
+        </div><!--性别-->
+        <div class="form-group">
+            <label for="name5">个性签名:</label>
+            <input type="text" class="form-control" id="name5" placeholder="请输入你的个性签名">
+        </div><!--个性签名-->
+        <div class="form-group">
+            <label>头像:</label>
+            <div class="layui-upload">
+                <button type="button" class="layui-btn" id="test1">上传图片</button>
+                <div class="layui-upload-list">
+                    <img class="layui-upload-img" id="demo1">
+                    <p id="demoText"></p>
+                </div>
+            </div>
+        </div><!--上传头像-->
+    </form>
+    <form role="form" class="col-xs-6">
+        <div class="form-group">
+            <label for="name1">账号:</label>
+            <input type="text" class="form-control" id="name1" placeholder="请输入你的登录账号">
+        </div><!--账号-->
+        <div class="form-group">
+            <label for="name2">密码:</label>
+            <input type="password" class="form-control" id="name2" placeholder="请输入你的密码">
+        </div><!--密码-->
+        <div class="form-group">
+            <label for="name3">确认密码:</label>
+            <input type="password" class="form-control" id="name3" placeholder="请确认你的密码">
+        </div><!--确认密码-->
+    </form>
+</div>
+<div class="container">
+<button class="btn btn-primary center-block"><a  class="" href="mySetting.html">注册</a></button>
+</div>
+<div class="container">
+    <nav class="navbar-fixed-bottom">
+        <div class="row text-center icon1">
+            <a href="#"><img src="img/wechat.png"></a>
+            <a href="#"><img src="img/sina.png"></a>
+            <a href="#"><img src="img/qq.png"></a>
+            <a href="#"><img src="img/google.png"></a>
+        </div>
+        <div class="row text-center">
+            <p><a href="About_Us.html">关于我们 </a>|<a href="#"> 加入我们 </a>|<a href="#"> 联系我们 </a></p>
+        </div>
+        <div class="row">
+            <p class="text-center">Copyright@2013-2018 By Liuwenxiao</p>
+        </div>
+    </nav>
+</div><!--底部-->
+<script>
+    layui.use('upload', function () {
+        var $ = layui.jquery
+            , upload = layui.upload;
+
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#test1'
+            , url: '/upload/'
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#demo1').attr('src', result); //图片链接（base64）
+                });
+            }
+            , done: function (res) {
+                //如果上传失败
+                if (res.code > 0) {
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+            }
+            , error: function () {
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function () {
+                    uploadInst.upload();
+                });
+            }
+        });
+    })
+</script>
+</body>
+</html>

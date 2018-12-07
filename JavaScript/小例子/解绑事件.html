@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="button" id="btn1" value="绑定">
+	<input type="button" id="btn2" value="解绑">
+	<script src="common.js"></script>
+	<script>
+		function f1(){
+			console.log("first one");
+		}
+		function f2(){
+			console.log("second one");//为了后面解绑，这里要用命名函数
+		}
+		my$("btn1").addEventListener("click",f1,"false");
+		my$("btn1").addEventListener("click",f2,"false");
+
+		my$("btn2").onclick=function(){
+			my$("btn1").removeEventListener("click",f1,"false");//这里解绑必须制定对应的函数名
+		}
+		
+	</script>
+</body>
+</html>

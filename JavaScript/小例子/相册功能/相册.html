@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>相册功能</title>
+	<style>
+		.tiny{
+			widows:300px;
+			height:400px;
+		}
+	</style>
+</head>
+<body>
+	<a href="image/1.png"><image src="image/1.png" class="tiny"></a>
+	<a href="image/2.png"><image src="image/2.png" class="tiny"></a>
+	<a href="image/3.png"><image src="image/3.png" class="tiny"></a>
+	<a href="image/4.png"><image src="image/4.png" class="tiny"></a>
+
+	<image src="" id="glary">
+<script>
+	function my$(id){
+		return document.getElementById(id);//注意这里不加""
+	}
+	var btn=document.getElementsByTagName("a");
+	for(var i=0;i<btn.length;i++){
+		btn[i].onclick=function(){//为每个a标签赋予事件
+			my$("glary").src=this.href;
+			return false;		//阻止跳转	
+		}
+	}
+</script>
+</body>
+</html>

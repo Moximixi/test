@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<span>全选:</span>
+	<input type="checkbox" id="checkall"><br>
+	<span>分部:</span>
+	<div id="checkothers">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+	</div>
+	<script src="common.js"></script>
+	<script>
+		var checkall=my$("checkall");
+		var checkothers=my$("checkothers").getElementsByTagName("input");
+
+		//为全选注入点击事件
+		checkall.onclick=function(){
+			for(var i=0;i<checkothers.length;i++){
+				checkothers[i].checked=this.checked;
+			}
+		}
+		//分选影响全选
+		for(var j=0;j<checkothers.length;j++){
+			checkothers[j].onclick=function(){
+				var i=0;//每次循环遍历之前先清零
+				for(var a=0;a<checkothers.length;a++){//每点击一次循环遍历已经点击的次数
+					if(checkothers[a].checked==true)
+						i++;
+
+			}
+			console.log("当前点击数:"+i);
+			if(i==4)
+				checkall.checked=true;
+			else
+				checkall.checked=false;
+				}
+		}
+	
+	</script>
+</body>
+</html>

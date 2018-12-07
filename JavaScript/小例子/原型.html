@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	function Person(name,age){
+		this.name=name;
+		this.age=age;
+	}//通过自定义构造函数来创建对象
+	Person.prototype.eat=function(){
+		console.log("我爱js");
+	}//通过原型来添加方法
+	var p1=new Person("小明",20);
+	var p2=new Person("小红",30);
+	console.log(p1.eat==p2.eat);//true
+
+</script>
+</body>
+</html>

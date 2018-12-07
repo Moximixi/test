@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>placeholder</title>
+	<style>
+		input{
+			color:grey;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" value="请输入内容" id="input">
+	<script>
+		var input=document.getElementById("input");
+		input.onfocus=function(){
+			if(this.value=="请输入内容"){
+				this.value="";
+				this.style.color="black";//注意这里要加""
+			}
+		};
+		input.onblur=function(){
+			if(this.value.length==0){
+				this.value="请输入内容";
+				this.style.color="grey";
+			}
+		}
+	</script>
+</body>
+</html>
