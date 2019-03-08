@@ -55,8 +55,8 @@ function roll(){
                 lottery.speed += 300;
             }
         }
-        if (lottery.speed<40) {
-            lottery.speed=40;/*控制转动速度最小减到40*/
+        if (lottery.speed<100) {
+            lottery.speed=100;/*控制转动速度最小减到100*/
         };
         lottery.timer = setTimeout(roll,lottery.speed);/*设置控制器,每隔lotter.speed的时间执行一次roll()函数*/
     }
